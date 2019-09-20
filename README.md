@@ -1,7 +1,7 @@
 # CSS Practices 2019
 [SELF-EDUCATION] Exercises completed on Youtube
 
-![CSS](css.png)
+<div align="center"><img src="css.png" width="200" /></div>
 
 # Index
 * [Flexbox](flexbox.html) ([Source](https://www.youtube.com/watch?v=JJSoEo8JSnc))
