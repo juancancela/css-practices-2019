@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Practice 2: Media Queries</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            margin: 0px;
+        }
+
+        body,
+        html {
+            width: 100%;
+            height: 100%;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1100px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #ccc;
+            height: 200px;
+        }
+
+        #header {
+            height: 120px;
+            background-color: blue;
+        }
+
+        .box {
+            width: 50%;
+            height: 140px;
+            float: left;
+        }
+
+        .box1 {
+            background-color: aquamarine;
+        }
+
+        .box2 {
+            background-color: red;
+        }
+
+        .box3 {
+            background-color: pink;
+        }
+
+        .box4 {
+            background-color: yellow;
+        }
+
+        .clearfix {
+            clear: both;
+        }
+
+        @media screen and (max-width: 768px) {
+            .box1 {
+                width: 100%;
+            }
+
+            .box2 {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header id="header"></header>
+        <div class="box box1">box 1</div>
+        <div class="box box2">box 2</div>
+        <div class="box box3">box 3</div>
+        <div class="box box4">box 4</div>
+        <div class="clearfix"></div>
+    </div>
+</body>
+
+</html>

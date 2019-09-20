@@ -1,0 +1,221 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Practice 4: Advanced CSS Selectors</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Crimson+Text:400,700");
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin-top: 0;
+        }
+
+        body {
+            background: #f5f5f5;
+            color: #18314F;
+            font-family: 'Crimson Text', serif;
+            font-size: 1.5rem;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 15px;
+            line-height: 1;
+            font-weight: 400;
+            margin: 3em 0;
+        }
+
+        h2 {
+            font-weight: 400;
+            text-transform: uppercase;
+            font-size: 1rem;
+            margin-bottom: 3em;
+            letter-spacing: 8px;
+            text-align: center;
+            color: #8BBEB2;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            border-bottom: 1px solid rgba(24, 49, 79, 0.25);
+            width: 20%;
+            margin: 3em auto 0;
+        }
+
+        h2 span {
+            font-size: 5em;
+            font-weight: 700;
+            display: block;
+            color: #18314F;
+        }
+
+        a {
+            color: #8BBEB2;
+        }
+
+        a:hover {
+            color: #7AE7C7;
+        }
+
+        section {
+            background: white;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+            width: 80%;
+            margin: 50px auto;
+            padding: 50px;
+        }
+
+        .universal code {
+            background: #C3DDD7;
+            padding: .25em;
+        }
+
+        .direct-children .example {
+            padding: 1em;
+            background: #C3DDD7;
+        }
+
+        .direct-children .example p {
+            margin: 0;
+        }
+
+        .adjacent-sibling .box {
+            height: 75px;
+            width: 75px;
+            background: rgba(0, 0, 0, 0.5);
+            display: inline-block;
+        }
+
+        .general-sibling .box {
+            height: 75px;
+            width: 75px;
+            background: rgba(0, 0, 0, 0.5);
+            display: inline-block;
+        }
+
+        /* =================================
+   Universal 
+   ================================= */
+        /* =================================
+   Direct children
+   ================================= */
+        .direct-children p {
+            color: red;
+        }
+
+        .direct-children>p {
+            color: green;
+        }
+
+        /* =================================
+   Adjacent siblings
+   ================================= */
+        .adjacent-sibling .box+.box {
+            background: red;
+        }
+
+        /* =================================
+   General siblings
+   ================================= */
+        .general-sibling .box~.box {
+            background: red;
+        }
+
+        /* =================================
+   Attributes
+   ================================= */
+        /* exact match */
+        a[target] {
+            color: darkblue;
+        }
+
+        a[href="about.html"] {
+            color: red;
+        }
+
+        a[class|="another"] {
+            color: purple;
+        }
+
+        a[href^="http"] {
+            color: orange;
+        }
+
+        a[href*="google"] {
+            color: black;
+        }
+
+        a[href$=".ca"] {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Advanced CSS Selectors</h1>
+
+    <section class="the-ones-you-know">
+        <h2>You know these (I hope)</h2>
+        <p>element selector - <code>p</code></p>
+        <p>class selector - <code>.class</code></p>
+        <p>id selector - <code>#id</code> </p>
+    </section>
+
+    <section class="universal">
+        <h2><span>*</span>Universal</h2>
+        <p>This selects EVERYTHING. Every single thing<br> (except ::before and ::after...).</p>
+        <ul>
+            <li>Every</li>
+            <li>Single</li>
+            <li>Thing</li>
+            <li><a href="#">Everything</a></li>
+        </ul>
+        <code>Yup, even this, and, well, everything else too.</code>
+    </section>
+
+    <section class="direct-children">
+        <h2><span>></span>Direct children</h2>
+        <p>You can create selectors like this:</p>
+        <code>.direct-children p</code>
+        <p>That will select all paragraphs inside of .direct-children</p>
+        <div class="example">
+            <p>But <code>.direct-child > p</code> will not select this paragraph.</p>
+        </div>
+    </section>
+
+    <section class="adjacent-sibling">
+        <h2> <span>+</span>Adjacent sibling</h2>
+        <div class="box"></div>
+        <div class="box"></div>
+        <a href="#">hi</a>
+        <div class="box"></div>
+        <div class="box"></div>
+    </section>
+
+    <section class="general-sibling">
+        <h2><span>~</span>General Sibling</h2>
+        <div class="box"></div>
+        <div class="box"></div>
+        <a href="#">hi</a>
+        <div class="box"></div>
+        <div class="box"></div>
+    </section>
+
+    <section class="attribute">
+        <h2><span>[ ]</span>Attribute </h2>
+        <a href="https://www.google.com" class="link-one">Google</a>
+        <a href="https://www.google.ca" class="link-two">Google Canada</a>
+        <a href="about.html" class="link-three">About page</a>
+        <a href="http://awesomesocialnetwork.com" class="link-four" target="_blank">Socialize</a>
+        <a href="ebook.pdf" class="link-five">PDF file</a>
+        <a href="#" class="another-link">Yet another link</a>
+    </section>
+</body>
+
+</html>
