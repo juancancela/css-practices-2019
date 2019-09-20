@@ -1,4 +1,4 @@
-# CSS Practises 2019
+# CSS Practices 2019
 [SELF-EDUCATION] Exercises completed on Youtube
 
 ![CSS](css.png)
