@@ -11,3 +11,4 @@
 * [Pseudo Elements Part 3/3](pseudo-elements-part3.html) ([Source](https://www.youtube.com/watch?v=djbtPnNmc0I))
 * [Advanced CSS Selectors](advanced-css-selectors.html) ([Source](https://www.youtube.com/watch?v=Bcr70LIJcOk))
 * [em and rem explained](em-and-rem-explained.html)([Source](https://www.youtube.com/watch?v=_-aDOAMmDHI))
+* [CSS Specificity](css-specificity.html)([Source](https://www.youtube.com/watch?v=c0kfcP_nD9E))
