@@ -1,0 +1,185 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Practice 5: en and rem explained</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Oswald:300,700');
+
+        html {
+            font-size: 16px;
+        }
+
+        @media (min-width: 700px) {
+            html {
+                font-size: 25px;
+            }
+        }
+
+        body {
+            color: #34517f;
+            margin: 3em auto;
+            text-align: center;
+            background: linear-gradient(to left, #c2e59c, #64b3f4);
+            font-family: 'Oswald', sans-serif;
+            font-weight: 300;
+            font-size: 1em;
+            line-height: 1.6;
+        }
+
+        .subhead {
+            font-size: 1.6rem;
+            margin: .5em 0;
+        }
+
+        .subhead::after {
+            content: '';
+            display: block;
+            height: 1px;
+            background: #34517f;
+            margin: 1em auto;
+            width: 50%;
+        }
+
+        .grid {
+            display: flex;
+            width: 70%;
+            margin: 0 auto;
+        }
+
+        .col {
+            flex: 1;
+            margin: 0 0.5em;
+            padding: 0 0.5em;
+        }
+
+
+
+        /* ============
+           === EMS  === 
+           ============ */
+
+        .grid {}
+
+        .col--em {}
+
+        .col--em h1 {
+            font-size: 2.5em;
+        }
+
+        .col--em p {
+            font-size: 1em;
+        }
+
+
+
+        /* ============
+           === REMS === 
+           ============ */
+        .col--rem {}
+
+        .col--rem h1 {
+            font-size: 2.5rem;
+        }
+
+        .col--rem p {
+            font-size: 1rem;
+        }
+
+
+
+
+        /* ============
+           Call to action 
+           ============ */
+
+        h1 {
+            font-size: 4em;
+            margin: .5em 0;
+            line-height: 1;
+        }
+
+        .call-to-action {
+            background: linear-gradient(to left, #f46b45, #eea849);
+            padding: 3em 0;
+            color: white;
+            text-shadow: 0 0 15px rgba(0, 0, 0, .5);
+            margin-top: 500px;
+            font-size: 1em;
+
+        }
+
+        .call-to-action--small {
+            font-size: 1em;
+        }
+
+        .btn {
+            display: inline-block;
+            background: black;
+            font-weight: 700;
+            letter-spacing: 5px;
+            color: white;
+            text-transform: uppercase;
+            text-decoration: none;
+
+            padding: 1em 3em;
+
+            margin: 0 .25rem;
+        }
+
+        .btn--small {
+            font-size: .5em;
+        }
+
+        .btn--lrg {
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Units in CSS</h1>
+    <p class="subhead">em | rem</p>
+
+    <div class="grid">
+
+        <div class="col col--em">
+            <h1>em</h1>
+            <p>All the font sizes in this column are set using ems.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eget nulla sapien. Aliquam eget magna eu
+                mauris fermentum interdum sed sed nibh. In hac habitasse platea dictumst. Aliquam varius augue sit amet
+                neque venenatis, at placerat lectus scelerisque. Duis feugiat lacus sit amet odio viverra, a luctus
+                dolor rhoncus. Vestibulum feugiat nisi erat, finibus scelerisque lectus pharetra sed. Quisque commodo
+                magna a ultricies eleifend. Etiam dolor nunc, tincidunt sit amet magna vel, euismod pulvinar velit.
+                Etiam aliquet arcu ligula, et venenatis nulla posuere non. Morbi feugiat pulvinar dolor at elementum.
+                Integer tristique tincidunt lectus, in fringilla velit feugiat quis.</p>
+        </div>
+
+        <div class="col col--rem">
+            <h1>rem</h1>
+            <p>All the font sizes in this column are set using rems.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eget nulla sapien. Aliquam eget magna eu
+                mauris fermentum interdum sed sed nibh. In hac habitasse platea dictumst. Aliquam varius augue sit amet
+                neque venenatis, at placerat lectus scelerisque. Duis feugiat lacus sit amet odio viverra, a luctus
+                dolor rhoncus. Vestibulum feugiat nisi erat, finibus scelerisque lectus pharetra sed. Quisque commodo
+                magna a ultricies eleifend. Etiam dolor nunc, tincidunt sit amet magna vel, euismod pulvinar velit.
+                Etiam aliquet arcu ligula, et venenatis nulla posuere non. Morbi feugiat pulvinar dolor at elementum.
+                Integer tristique tincidunt lectus, in fringilla velit feugiat quis.</p>
+        </div>
+    </div>
+
+    <div class="call-to-action">
+        <h1>A call to action</h1>
+        <a href="" class="btn">Buy now</a>
+        <a href="" class="btn btn--small">Buy now</a>
+        <a href="" class="btn btn--lrg">Buy now</a>
+    </div>
+
+    <div class="call-to-action call-to-action--small">
+        <h1>A call to action</h1>
+        <a href="" class="btn">Buy now</a>
+    </div>
+</body>
+
+</html>
